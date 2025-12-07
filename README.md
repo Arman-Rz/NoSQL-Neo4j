@@ -61,7 +61,11 @@ NoSQL-Neo4j
 5. **Configure Neo4j**
    - Update `neo4j.conf` to allow CSV imports:
      ```ini
-         server.directories.import=import
+         dbms.security.allow_csv_import_from_file_urls=true
+     ```
+   - Download and add the [apoc](https://neo4j.com/docs/apoc/current/installation/) plugin in the following directory:
+     ```arduino
+       neo4j-community-202x.xx.x/plugins
      ```
 6. **Load CSVs into the database**  
    To do that, run the `LoadDatabase.ipynb` notebook.
